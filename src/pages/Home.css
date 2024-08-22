@@ -88,17 +88,25 @@ main {
   margin-bottom: 5px;
 }
 
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   main {
-    margin: 2rem 26rem 0 26rem;
+    margin: 2rem 25rem 0 25rem;
   }
-
   .tool-area {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-@media only screen and (min-width: 640px) and (max-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  main {
+    margin: 2rem 5rem 0 5rem;
+  }
+  .tool-area {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
   main {
     margin: 2rem;
   }
