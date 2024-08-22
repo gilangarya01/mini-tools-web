@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffe9b8;
+}
+
+a {
+  text-decoration: none;
+}
+
+a > i {
+  margin-right: 0.7rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 0.7rem;
+  border: 2px solid black;
+  box-shadow: 5px 5px black;
+  border-radius: 0.5rem;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  border: 2px solid black;
+  box-shadow: 5px 5px black;
+  border-radius: 0.5rem;
+  background-color: #fcdc94;
+}
+
+button:hover {
+  transition: 0.5s;
+  background-color: #ddc183;
+  cursor: pointer;
+  box-shadow: 2px 2px;
+}
+
+main {
+  background-color: #ef9c66;
+  padding: 20px;
+  border-radius: 1rem;
+  margin: 2rem;
+  border: 2px solid black;
+  box-shadow: 5px 5px black;
+}
+
+#back-btn {
+  color: black;
+  font-size: 20px;
+}
+
+.tool-area {
+  width: 100%;
+  margin-top: 1rem;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.tool-btn {
+  width: 7rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  background-color: #fcdc94;
+  outline: none;
+  border: 2px solid #000;
+  border-radius: 1rem;
+  box-shadow: 5px 5px black;
+  font-weight: bold;
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+@media only screen and (min-width: 600px) {
+  main {
+    margin: 2rem 26rem 0 26rem;
+  }
+
+  .tool-area {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

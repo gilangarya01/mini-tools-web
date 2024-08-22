@@ -1,0 +1,30 @@
+* {
+  font-family: sans-serif;
+}
+
+.output-area {
+  border: 2px solid black;
+  box-shadow: 5px 5px black;
+  background-color: white;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 30px;
+}
+
+.input-area {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.input-btn {
+  font-size: 2rem;
+  height: 5rem;
+  padding: 1rem;
+}
+
+.input-btn:nth-child(2),
+.input-btn:last-child {
+  grid-column: span 2;
+}
