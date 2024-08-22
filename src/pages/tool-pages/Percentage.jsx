@@ -1,5 +1,15 @@
 import "./Percentage.css";
 
+// Get the input values
+function calculatePercentage() {
+  const percentageInput = document.getElementById("percentage-input").value;
+  const valueInput = document.getElementById("value-input").value;
+  const resultOutput = document.getElementById("result");
+
+  let result = (percentageInput / 100) * valueInput;
+  resultOutput.textContent = result;
+}
+
 const Percentage = () => {
   return (
     <main>
@@ -8,27 +18,27 @@ const Percentage = () => {
         Back
       </a>
       <div id="container">
-        <label htmlFor="height-input">Percentage (%)</label>
+        <label htmlFor="percentage-input">Percentage (%)</label>
         <input
-          id="height-input"
+          id="percentage-input"
           className="date-input"
           type="number"
-          name="height-input"
+          name="percentage-input"
         />
-        <label htmlFor="weight-input">Value</label>
+        <label htmlFor="value-input">Value</label>
         <input
-          id="weight-input"
-          className="weight-input"
+          id="value-input"
+          className="value-input"
           type="number"
-          name="weight-input"
+          name="value-input"
         />
-        <button id="calculate-btn" type="button">
+        <button id="calculate-btn" type="button" onClick={calculatePercentage}>
           Calculate
         </button>
       </div>
       <div id="output-container">
         <p>Result :</p>
-        <h2 id="result">20</h2>
+        <h2 id="result">0</h2>
       </div>
     </main>
   );

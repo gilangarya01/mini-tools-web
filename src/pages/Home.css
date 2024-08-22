@@ -48,7 +48,7 @@ main {
   background-color: #ef9c66;
   padding: 20px;
   border-radius: 1rem;
-  margin: 2rem;
+  margin: 2rem 0.5rem;
   border: 2px solid black;
   box-shadow: 5px 5px black;
 }
@@ -63,7 +63,7 @@ main {
   margin-top: 1rem;
   display: grid;
   justify-items: center;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
 
@@ -88,12 +88,21 @@ main {
   margin-bottom: 5px;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
   main {
     margin: 2rem 26rem 0 26rem;
   }
 
   .tool-area {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 768px) {
+  main {
+    margin: 2rem;
+  }
+  .tool-area {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

@@ -1,5 +1,27 @@
 import "./Age.css";
 
+// Calculate Age
+function calculateAge() {
+  const dateOnInput = new Date(document.querySelector("#date-on").value);
+  const dateOfBirthInput = new Date(document.querySelector("#age-date").value);
+  const ageOutput = document.querySelector("#age-output");
+
+  let dayAge = dateOnInput.getDate() - dateOfBirthInput.getDate();
+  let monthAge = dateOnInput.getMonth() - dateOfBirthInput.getMonth();
+  let yearAge = dateOnInput.getFullYear() - dateOfBirthInput.getFullYear();
+
+  if (dayAge < 0) {
+    dayAge += 30;
+    monthAge--;
+  }
+  if (monthAge < 0) {
+    monthAge += 12;
+    yearAge--;
+  }
+
+  ageOutput.textContent = `${yearAge} Year ${monthAge} Month ${dayAge} Days`;
+}
+
 const Age = () => {
   return (
     <main>
@@ -17,7 +39,7 @@ const Age = () => {
         />
         <label htmlFor="date-on">Date on</label>
         <input id="date-on" className="date-input" type="date" name="date-on" />
-        <button id="calculate-btn" type="button">
+        <button id="calculate-btn" type="button" onClick={calculateAge}>
           Calculate
         </button>
       </div>
