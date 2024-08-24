@@ -42,6 +42,26 @@ const Home = () => {
             text={"Percentage"}
             icon={"fa-solid fa-percent"}
           />
+          <ToolBtn
+            path={"/textcase"}
+            text={"TextCase"}
+            icon={"fa-solid fa-font"}
+          />
+          <ToolBtn
+            path={"/random-list"}
+            text={"Random List"}
+            icon={"fa-solid fa-list"}
+          />
+          <ToolBtn
+            path={"/repeat-text"}
+            text={"Repeat Text"}
+            icon={"fa-solid fa-repeat"}
+          />
+          <ToolBtn
+            path={"/yesorno"}
+            text={"Yes/No"}
+            icon={"fa-solid fa-thumbs-up"}
+          />
         </div>
       </main>
     </>

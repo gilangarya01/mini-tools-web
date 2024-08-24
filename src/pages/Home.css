@@ -20,7 +20,9 @@ h1 {
   text-align: center;
 }
 
-input {
+input,
+select,
+textarea {
   width: 100%;
   padding: 0.7rem;
   border: 2px solid black;
@@ -28,6 +30,10 @@ input {
   border-radius: 0.5rem;
   margin-top: 0.2rem;
   margin-bottom: 1rem;
+}
+
+textarea {
+  resize: none;
 }
 
 button {

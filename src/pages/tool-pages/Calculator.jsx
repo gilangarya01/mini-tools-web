@@ -35,6 +35,11 @@ const Calculator = () => {
       return;
     }
 
+    if (input === ".") {
+      setOutput((prev) => (prev.slice(-1) === "." ? prev : prev + "."));
+      return;
+    }
+
     if (input === "=") {
       try {
         // Ketika tombol "=" diklik, hitung hasil ekspresi matematika di dalam output
