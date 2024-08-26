@@ -13,4 +13,9 @@ Repository proyek web sederhana yang menampilkan berbagai tool-tool sederhana ya
 
 ### How To Use
 
+#### Build React js dengan Vite
+```bash
+npm run dev
+```
+
 Jalankan file `index.html` di folder `/dist` dengan live-server yang merupakan hasil build React js dari Vite
