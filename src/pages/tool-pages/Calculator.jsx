@@ -29,15 +29,16 @@ const Calculator = () => {
     }
 
     if (input === "DEL") {
+      if (output === "Error") setOutput("0");
       // Jika tombol "DEL" diklik, hapus karakter terakhir dari output,
       // atau reset ke "0" jika hanya ada satu karakter
       setOutput((prev) => (prev.length > 1 ? prev.slice(0, -1) : "0"));
       return;
     }
 
-    if (input === ".") {
-      setOutput((prev) => (prev.slice(-1) === "." ? prev : prev + "."));
-      return;
+    const operator = ["/", "*", "+", "-", "."];
+    if (operator.includes(input)) {
+      if (operator.includes(output.slice(-1))) return;
     }
 
     if (input === "=") {
@@ -46,9 +47,9 @@ const Calculator = () => {
         // Menggunakan fungsi Function sebagai alternatif aman untuk eval
         const result = Function(`"use strict"; return (${output})`)();
         setOutput(result.toString());
-      } catch (error) {
+      } catch (e) {
         // Jika terjadi error saat perhitungan, tampilkan pesan error
-        setOutput("Error: " + error);
+        setOutput("Error");
       }
       return;
     }
